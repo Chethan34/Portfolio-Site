@@ -18,7 +18,7 @@ export default function homepage() {
           Hey, my name is Chethan. A minimalist obsessed with the web world, exploring functionalities and design with curiosity.
         </p>
         <p className='mb-10 text-center'> 
-          I'm always interested in new projects, trying out new technologies, and open source. If you would like to connect, feel free
+          I&apos;m always interested in new projects, trying out new technologies, and open source. If you would like to connect, feel free
           to reach out via the links below.
         </p>
         <div className="flex space-x-4 justify-center">
