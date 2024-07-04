@@ -1,4 +1,3 @@
-"use client";
 import { cn } from "@/utils/cn";
 import React, { ReactNode } from "react";
 
@@ -8,7 +7,7 @@ interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 export const AuroraBackground = ({
-  className,
+  className = "",
   children,
   showRadialGradient = true,
   ...props
@@ -30,8 +29,7 @@ export const AuroraBackground = ({
             animate-aurora
             pointer-events-none
             absolute -inset-[10px] opacity-50`,
-              showRadialGradient &&
-                `mask-[radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]`
+              showRadialGradient ? `mask-[radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]` : '' // Use ternary operator to ensure a string type
             )}
           ></div>
         </div>
