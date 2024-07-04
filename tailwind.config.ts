@@ -1,3 +1,4 @@
+// tailwind.config.ts
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -6,20 +7,47 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: "class",
   theme: {
     extend: {
       animation: {
-        aurora: 'aurora 15s linear infinite',
+        aurora: "aurora 60s linear infinite",
       },
       keyframes: {
         aurora: {
-          from: { backgroundPosition: '0% 0%' },
-          to: { backgroundPosition: '200% 0%' },
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+      },
+      colors: {
+        blue: {
+          100: '#E6F3FF',
+          200: '#B3D9FF',
+          300: '#80BFFF',
+          400: '#4DA6FF',
+          500: '#1A8CFF',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
+}
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }: any) {
+  const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette") as (colors: object) => object;
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
 }
 
 export default config
