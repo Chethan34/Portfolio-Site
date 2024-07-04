@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Clogo from '/public/clogo.png';
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
-export default function homepage(){
+export default function homepage() {
   return (
-    <div className="flex flex-col min-h-screen justify-center items-center text-white px-4 sm:px-8">
-      <div className="flex flex-col space-y-8 justify-center items-center max-w-4xl w-full mt-[-50px] sm:mt-[-80px]">
+    <AuroraBackground className="text-white">
+      <div className="relative z-10 flex flex-col space-y-8 justify-center items-center max-w-4xl w-full mt-[-50px] sm:mt-[-80px]">
         <div className="grid grid-cols-1 gap-4 items-center mb-4">
           <Image src={Clogo} alt="C logo symbol" width={160} height={130} />
           <div className="flex flex-col justify-center items-center mb-0">
@@ -32,6 +33,6 @@ export default function homepage(){
           </div>
         </div>
       </div>
-    </div>
+    </AuroraBackground>
   )
 }
