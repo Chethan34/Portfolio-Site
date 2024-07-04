@@ -23,13 +23,13 @@ export default function homepage() {
         </p>
         <div className="flex space-x-4 justify-center">
           <div className="relative inline-flex items-center">
-            <Link href="https://github.com/Chethan34" className="text-underline after:content-['·'] after:absolute after:top-1/2 after:transform after:translate-y-[-50%] after:right-[-6px] after:text-white" target='blank'>GitHub</Link>
+            <Link href="https://github.com/Chethan34" className="text-underline after:content-['·'] after:absolute after:top-1/2 after:transform after:translate-y-[-50%] after:right-[-6px] after:text-white" target='_blank'>GitHub</Link>
           </div>
           <div className="relative inline-flex items-center">
-            <Link href="https://www.linkedin.com/in/chethan-p-194b75245/" className="text-underline after:content-['·'] after:absolute after:top-1/2 after:transform after:translate-y-[-50%] after:right-[-6px] after:text-white" target='blank'>LinkedIn</Link>
+            <Link href="https://www.linkedin.com/in/chethan-p-194b75245/" className="text-underline after:content-['·'] after:absolute after:top-1/2 after:transform after:translate-y-[-50%] after:right-[-6px] after:text-white" target='_blank'>LinkedIn</Link>
           </div>
           <div className="relative inline-flex items-center">
-            <Link href="mailto:chethanprakash720@gmail.com" className="text-underline after:content-[''] after:absolute after:top-1/2 after:transform after:translate-y-[-50%] after:right-[-2px] after:text-white" target='blank'>Email</Link>
+            <Link href="mailto:chethanprakash720@gmail.com" className="text-underline after:content-[''] after:absolute after:top-1/2 after:transform after:translate-y-[-50%] after:right-[-2px] after:text-white" target='_blank'>Email</Link>
           </div>
         </div>
       </div>
