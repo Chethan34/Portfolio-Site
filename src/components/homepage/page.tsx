@@ -10,8 +10,8 @@ export default function HomePage() {
         <div className="grid grid-cols-1 gap-4 items-center mb-4">
           <Image src={Clogo} alt="C logo symbol" width={160} height={130} />
           <div className="flex flex-col justify-center items-center mb-0">
-            <h1 className="text-4xl font-bold ml-0">Chethan</h1>
-            <p className="mt-2 ml-1 text-center font-light">Coding Enthusiast</p>
+            <h1 className="text-4xl font-bold ">Chethan</h1>
+            <p className="mt-2 ml-0 text-center font-light">Coding Enthusiast</p>
           </div>
         </div>
         <p className="mt-0 text-center">
